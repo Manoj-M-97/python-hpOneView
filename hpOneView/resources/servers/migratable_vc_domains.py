@@ -49,7 +49,7 @@ class MigratableVcDomains(object):
 
     @staticmethod
     def make_migration_information(oaIpAddress, oaUsername, oaPassword, vcmUsername, vcmPassword,
-                                   iloLicenseType='OneView', enclosureGroupUri=None):
+									type = 'migratable-vc-domains', iloLicenseType='OneView', enclosureGroupUri=None):
         return {
             'credentials': {
                 'oaIpAddress': oaIpAddress,
@@ -61,7 +61,7 @@ class MigratableVcDomains(object):
             },
             'iloLicenseType': iloLicenseType,
             'enclosureGroupUri': enclosureGroupUri,
-            'type': 'migratable-vc-domains',
+            'type': type,
             'category': 'migratable-vc-domains'
         }
 

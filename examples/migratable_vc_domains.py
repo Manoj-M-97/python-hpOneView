@@ -29,16 +29,16 @@ from pprint import PrettyPrinter
 
 
 config = {
-    "ip": "172.16.102.59",
+    "ip": "172.168.100.251",
     "credentials": {
         "userName": "Administrator",
-        "password": ""
+        "password": "GSE#admin1"
     },
-    "enclosure_hostname": "172.178.209.32",
+    "enclosure_hostname": "172.168.100.32",
     "enclosure_username": "Administrator",
-    "enclosure_password": "",
+    "enclosure_password": "Password",
     "vcmUsername": "Administrator",
-    "vcmPassword": "",
+    "vcmPassword": "Password",
     "enclosure_group_uri": None
 }
 
@@ -57,6 +57,7 @@ migrationInformation = MigratableVcDomains.make_migration_information(config['en
                                                                       config['enclosure_username'],
                                                                       config['enclosure_password'],
                                                                       config['vcmUsername'], config['vcmPassword'],
+																	  type = 'MigratableVcDomainV300',
                                                                       enclosureGroupUri=config['enclosure_group_uri'])
 
 # Start a migration by first creating a compatibility report
